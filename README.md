@@ -1,4 +1,4 @@
-#### A user Interface to input data and their validation and error modal using React.
+#### A user Interface authentication
 
 In the project directory, you can run:
 

@@ -6,10 +6,10 @@ This repository contains different react projects in different branches.
 
 - user interface to input data, and error modal when required
 
-# Expenses-manager
+# expenses
 
 - Expense manager
 
-# Food-order-app
+# food-order-app
 
 - A food ordering app

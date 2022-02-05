@@ -1,11 +1,11 @@
-### react-complete-guide
+#### An expense manager
 
-This repository contains different react projects in different branches.
+In the project directory, you can run:
 
-# add-user-UI
+### `npm start`
 
-- user interface to input data, and error modal when required
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# Expenses-manager
-
-- Expense manager
+The page will reload when you make changes.\
+You may also see any lint errors in the console.

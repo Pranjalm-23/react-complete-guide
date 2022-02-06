@@ -1,15 +1,12 @@
-### react-complete-guide
+#### A Movie App connected to backend
 
-This repository contains different react projects in different branches.
+- connected by apis
 
-# add-user-UI
+In the project directory, you can run:
 
-- user interface to input data, and error modal when required
+### `npm start`
 
-# expenses
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Expense manager
-
-# food-order-app
-
-- A food ordering app
+The page will reload when you make changes.

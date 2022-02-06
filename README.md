@@ -1,15 +1,9 @@
-### react-complete-guide
+#### A Demonstration of class-based components
 
-This repository contains different react projects in different branches.
+In the project directory, you can run:
 
-# add-user-UI
+### `npm start`
 
-- user interface to input data, and error modal when required
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# expenses
-
-- Expense manager
-
-# food-order-app
-
-- A food ordering app

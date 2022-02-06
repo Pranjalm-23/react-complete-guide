@@ -1,10 +1,11 @@
-const App = () => {
+import Users from './components/Users';
+
+function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <p>React projects </p>
+      <Users />
     </div>
   );
-};
+}
 
 export default App;

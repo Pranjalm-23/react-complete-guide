@@ -13,24 +13,25 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(
-        "xxxxxxxxxxxxxxxxfirebase apixxxxxxxxxxxxxxxxxxxxxxxxx"
-      );
+      const response = await fetch("xxxxxxxxxxxxxfirebase apixxxxxxxxxxxxxxx");
       if (!response.ok) {
         throw new Error("Something went wrong!");
       }
 
       const data = await response.json();
 
-      const transformedMovies = data.results.map((movieData) => {
-        return {
-          id: movieData.episode_id,
-          title: movieData.title,
-          openingText: movieData.opening_crawl,
-          releaseDate: movieData.release_date,
-        };
-      });
-      setMovies(transformedMovies);
+      const loadedMovies = [];
+
+      for (const key in data) {
+        loadedMovies.push({
+          id: key,
+          title: data[key].title,
+          openingText: data[key].openingText,
+          releaseDate: data[key].releaseDate,
+        });
+      }
+
+      setMovies(loadedMovies);
     } catch (error) {
       setError(error.message);
     }
@@ -41,8 +42,17 @@ function App() {
     fetchMoviesHandler();
   }, [fetchMoviesHandler]);
 
-  function addMovieHandler(movie) {
-    console.log(movie);
+  async function addMovieHandler(movie) {
+    const response = await fetch("xxxxxxxxxxxxxfirebase apixxxxxxxxxxxxxxx", {
+      method: "POST",
+      body: JSON.stringify(movie),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+    console.log(data);
   }
 
   let content = <p>Found no movies.</p>;

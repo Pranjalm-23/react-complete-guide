@@ -1,37 +1,27 @@
 import { Component } from "react";
+
 import User from "./User";
-
 import classes from "./Users.module.css";
-
-const DUMMY_USERS = [
-  { id: "u1", name: "Max" },
-  { id: "u2", name: "Manuel" },
-  { id: "u3", name: "Julie" },
-];
 
 class Users extends Component {
   constructor() {
     super();
-    // in this class-based-components all state variables need to be combined as extra property into a single state obj var as follows
     this.state = {
       showUsers: true,
-      more: false,
+      more: "Test",
     };
   }
 
   toggleUsersHandler() {
-    // this.state.showUsers = false; //NOT
     this.setState((curState) => {
-      return {
-        showUsers: !curState.showUsers,
-      }; //react merges instead of overriding
+      return { showUsers: !curState.showUsers };
     });
   }
 
   render() {
     const usersList = (
       <ul>
-        {DUMMY_USERS.map((user) => (
+        {this.props.users.map((user) => (
           <User key={user.id} name={user.name} />
         ))}
       </ul>
@@ -66,7 +56,7 @@ class Users extends Component {
 //   return (
 //     <div className={classes.users}>
 //       <button onClick={toggleUsersHandler}>
-//         {showUsers ? "Hide" : "Show"} Users
+//         {showUsers ? 'Hide' : 'Show'} Users
 //       </button>
 //       {showUsers && usersList}
 //     </div>

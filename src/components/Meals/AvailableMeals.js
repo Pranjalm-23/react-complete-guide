@@ -12,7 +12,7 @@ const AvailableMeals = () => {
     setIsLoading(true);
     const fetchMeals = async () => {
       const response = await fetch(
-        "xxxxxxx"
+        "https://react-course-http-reques-39802-default-rtdb.asia-southeast1.firebasedatabase.app/meals.json"
       );
 
       if (!response.ok) {

@@ -12,7 +12,7 @@ const AvailableMeals = () => {
     setIsLoading(true);
     const fetchMeals = async () => {
       const response = await fetch(
-        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "xxxxxxx"
       );
 
       if (!response.ok) {

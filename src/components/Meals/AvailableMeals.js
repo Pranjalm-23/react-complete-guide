@@ -6,13 +6,18 @@ import { useEffect, useState } from "react";
 const AvailableMeals = () => {
   const [MEALS, setMEALS] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [httpError, setHttpError] = useState();
 
   useEffect(() => {
     setIsLoading(true);
     const fetchMeals = async () => {
       const response = await fetch(
-        "xxx-firebase api-xxx"
+        "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       );
+
+      if (!response.ok) {
+        throw new Error("Something went wrong!");
+      }
 
       const responseData = await response.json();
       console.log(responseData);
@@ -31,13 +36,24 @@ const AvailableMeals = () => {
       setIsLoading(false);
     };
 
-    fetchMeals();
+    fetchMeals().catch((error) => {
+      setIsLoading(false);
+      setHttpError(error.message);
+    });
   }, []);
 
   if (isLoading) {
     return (
       <section className={classes.mealsLoading}>
-        <p>Loading</p>
+        <p>Loading...</p>
+      </section>
+    );
+  }
+
+  if (httpError) {
+    return (
+      <section className={classes.mealsError}>
+        <p>{httpError}</p>
       </section>
     );
   }

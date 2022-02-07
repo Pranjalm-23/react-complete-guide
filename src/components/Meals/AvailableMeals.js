@@ -1,12 +1,37 @@
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeals.module.css";
-
-const DUMMY_MEALS = [];
-//data to be fetch
+import { useEffect, useState } from "react";
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => (
+  const [MEALS, setMEALS] = useState([]);
+
+  useEffect(() => {
+    const fetchMeals = async () => {
+      const response = await fetch(
+        "xxxxxxx firebase-api xxxxxxxxxx"
+      );
+
+      const responseData = await response.json();
+      console.log(responseData);
+
+      const loadedData = [];
+
+      for (const key in responseData) {
+        loadedData.push({
+          id: key,
+          name: responseData[key].name,
+          description: responseData[key].description,
+          price: responseData[key].price,
+        });
+      }
+      setMEALS(loadedData);
+    };
+
+    fetchMeals();
+  }, []);
+
+  const mealsList = MEALS.map((meal) => (
     <MealItem
       key={meal.id}
       id={meal.id}

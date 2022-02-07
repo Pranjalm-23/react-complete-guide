@@ -1,10 +1,14 @@
-const App = () => {
+import React from 'react';
+import BackwardCounter from './components/BackwardCounter';
+import ForwardCounter from './components/ForwardCounter';
+
+function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      <p>React projects </p>
-    </div>
+    <React.Fragment>
+      <ForwardCounter />
+      <BackwardCounter />
+    </React.Fragment>
   );
-};
+}
 
 export default App;

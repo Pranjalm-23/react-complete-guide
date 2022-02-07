@@ -1,15 +1,11 @@
-### react-complete-guide
+#### A demo of building custom-hooks
 
-This repository contains different react projects in different branches.
+In the project directory, you can run:
 
-# add-user-UI
+### `npm start`
 
-- user interface to input data, and error modal when required
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-# expenses
-
-- Expense manager
-
-# food-order-app
-
-- A food ordering app
+The page will reload when you make changes.\
+You may also see any lint errors in the console.

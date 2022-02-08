@@ -2,5 +2,4 @@
 
 This repository contains different react projects in different branches.
 
-# Master
-- Expanse manager
+- adds items to list

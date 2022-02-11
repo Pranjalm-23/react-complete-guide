@@ -1,10 +1,10 @@
-const App = () => {
+import Counter from './components/Counter';
+
+
+function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-      <p>React projects </p>
-    </div>
+    <Counter />
   );
-};
+}
 
 export default App;

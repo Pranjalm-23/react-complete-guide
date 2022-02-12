@@ -2,14 +2,6 @@
 
 This repository contains different react projects in different branches.
 
-# add-user-UI
+# Multipage single Page Application
 
-- user interface to input data, and error modal when required
-
-# expenses
-
-- Expense manager
-
-# food-order-app
-
-- A food ordering app
+- using react-router

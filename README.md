@@ -2,6 +2,6 @@
 
 This repository contains different react projects in different branches.
 
-# Multipage single Page Application
+# react-router v5 -> v6
 
-- using react-router
+- upgrading

@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Products = () => {
+  // const navigate = useNavigate();
+
+  // // should be used inside useEffect()
+  // navigate("/welcome", { replace: true });
+  // navigate(-1);
+
   return (
     <section>
       <h1>The Products Page</h1>

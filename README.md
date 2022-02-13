@@ -4,4 +4,5 @@ This repository contains different react projects in different branches.
 
 # Optimization before deployment
 
-- Quotes App
+- npm run build
+  => will create a build folder with optimised code
